@@ -24,13 +24,21 @@
           </b-col>
         </b-row>
 
-        <b-row class="h-50 m-t-50">
+        <b-row class="m-t-50 m-b-0">
           <b-col class="btn-container">
-            <button class="btn outline size-lg m-x-15">check-in</button>
-            <button class="btn outline size-lg m-x-15">check-out</button>
-            <!-- <button class="btn outline size-lg m-x-15">guests</button> -->
+            <!-- <div v-if="checkin_date" class="input-label"><h6>check-in</h6></div>
+            <div v-if="checkout_date" class="input-label"><h6>check-out</h6></div> -->
+          </b-col>
+        </b-row>
+        <b-row class="h-50">
+          <b-col class="btn-container">
+            <datepicker class="m-x-15" placeholder="check-in date" v-model="checkin_date">
+            </datepicker>
+            <datepicker class="m-x-15" placeholder="check-out date" v-model="checkout_date">
+
+            </datepicker>
             <v-select class="m-x-15" v-model="selected" :options="options"></v-select>
-            <button class="btn outline size-lg m-x-15">book</button>
+            <button class="btn outline size-lg m-x-15" v-scroll-to="'#book'">book</button>
           </b-col>
         </b-row>
         <!-- Services -->
@@ -87,26 +95,20 @@
     <contact></contact>
   </b-container>
 
+<!--   <h1>h1 testing</h1><br>
+<h2>h2 testing</h2><br>
+<h3>h3 testing</h3><br>
+<h4>h4 testing</h4><br>
+<h5>h5 testing</h5><br>
+<h6>h6 testing</h6><br> -->
 </template>
-
- <!-- <div class="b-row m-t-100">
-   <datepicker :inline="true"></datepicker>
-   <div class="h-500 w-500">
-     <h1>h1 testing</h1><br>
-     <h2>h2 testing</h2><br>
-     <h3>h3 testing</h3><br>
-     <h4>h4 testing</h4><br>
-     <h5>h5 testing</h5><br>
-     <h6>h6 testing</h6><br>
-   </div>
- </div> -->
 
 <script>
 import Gallery from './gallery'
 import Book from './book'
 import Rates from './rates'
 import Contact from './contact'
-import Datepicker from 'vuejs-datepicker'
+import Datepicker from 'vuejs-datepicker/dist/vuejs-datepicker.esm.js';
 import $ from 'jquery'
 
 export default {
@@ -116,7 +118,7 @@ export default {
     'book': Book,
     'rates': Rates,
     'contact': Contact,
-    'date-picker': Datepicker,
+    'datepicker': Datepicker
   },
   data () {
     return {
@@ -129,12 +131,14 @@ export default {
         {id: 5, label: '5'}
       ],
       selected: null,
+      checkin_date: null,
+      checkout_date: null
     }
   }
 }
 </script>
-import $ from 'jquery';
-$('.datepicker').datepicker();
+import $ from 'jquery'
+$('.datepicker').datepicker()
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 </style>

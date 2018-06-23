@@ -3,24 +3,23 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 125px;
+  height: 100px;
   min-width: 1000px;
   z-index: 1001;
   padding: 0px;
   background: transparent;
   transition: all 750ms;
   &.darken {
-    height: 75px;
+    height: 65px;
     background: rgba(57, 55, 54, 0.85);
   }
 }
 
 .logo-div {
-  margin-top: 20px;
   transition: all 500ms;
   &.shrink {
     margin-top: 0px;
-    transform: scale(0.7);
+    transform: scale(0.75);
   }
 }
 .nav-buttons {
@@ -44,21 +43,36 @@
   border-radius: 0px;
   font-weight: 900;
   font-size: 16px;
-  transition: 300ms ease-in-out;
+  transition: all 250ms ease-in-out;
   text-align: center;
   padding-top: 10px;
   text-decoration: none;
   &:hover {
-    border-bottom: 3px solid $bone;
+    //border-bottom: 3px solid $bone;
     text-decoration: none;
     color: $bone;
   }
-  &.active-nav {
-    border: 3px solid $cyan;
-    color: $cyan;
+  &:not(.is-active):after {
+    display:block;
+    content: '';
+    margin-top: 3px;
+    border-bottom: solid 3px $bone;
+    transform: scaleX(0);
+    transition: all 250ms ease-in-out;
+  }
+
+  &:hover:after {
+    transform: scaleX(1);
+  }
+  &.fromRight:after{
+    transform-origin: 100% 50%;
+  }
+  &.fromLeft:after{
+    transform-origin: 0% 50%;
   }
   &.is-active {
     color: $cyan;
     border-bottom: 3px solid $cyan;
+    transition: all 250ms ease-in-out;
   }
 }

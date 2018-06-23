@@ -1,9 +1,9 @@
 <template>
   <div class="navbar">
-    <div class="logo-div float-l h-75 w-300 m-l-50 m-r-50">
+    <div class="logo-div float-l h-60 w-250 m-l-50 m-r-50">
       <div class="logo"></div>
     </div>
-    <scrollactive class="nav-buttons" :offset="0">
+    <scrollactive class="nav-buttons" :offset="0" :modifyUrl="false">
       <a v-for="page in navButtons"
          :href="page.id"
          class="scrollactive-item nav-btn">
@@ -16,7 +16,7 @@
 <script>
 import $ from 'jquery';
 export default {
-  name: 'nav',
+  name: 'navbar',
   components: {
   },
   data () {
