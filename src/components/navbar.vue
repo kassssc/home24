@@ -1,11 +1,16 @@
 <template>
-  <scrollactive class="my-nav navbar">
-    <a v-for="page in navButtons"
-       :href="page.id"
-       class="scrollactive-item nav-btn">
-      {{page.name}}
-    </a>
-  </scrollactive>
+  <div class="navbar">
+    <div class="logo-div float-l h-75 w-300 m-l-50 m-r-50">
+      <div class="logo"></div>
+    </div>
+    <scrollactive class="nav-buttons" :offset="0">
+      <a v-for="page in navButtons"
+         :href="page.id"
+         class="scrollactive-item nav-btn">
+        {{page.name}}
+      </a>
+    </scrollactive>
+  </div>
 </template>
 
 <script>
@@ -20,8 +25,8 @@ export default {
         [
           { name: 'home24',   route: '/' , id: '#home' },
           { name: 'gallery',  route: '/gallery' , id: '#gallery'},
-          { name: 'rates',    route: '/rates' , id: '#rates' },
           { name: 'book',     route: '/book' , id: '#book' },
+          { name: 'rates',    route: '/rates' , id: '#rates' },
           { name: 'contact',  route: '/contact' , id: '#contact' }
         ]
     }

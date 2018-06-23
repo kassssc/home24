@@ -23,12 +23,21 @@
     transform: scale(0.7);
   }
 }
-
+.nav-buttons {
+  height: 100%;
+  width: auto;
+  min-width: 300px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 35px;
+}
 .nav-btn {
   height: 40px;
-  width: 110px;
-  min-width: 75px;
-  margin: 0px;
+  width: 100px;
+  min-width: 100px;
+  margin-right: 10px;
   background: transparent;
   color: $bone;
   text-transform: uppercase;
@@ -40,16 +49,16 @@
   padding-top: 10px;
   text-decoration: none;
   &:hover {
-    border-bottom: 2px solid $bone;
+    border-bottom: 3px solid $bone;
     text-decoration: none;
     color: $bone;
   }
   &.active-nav {
-    border: 2px solid $cyan;
+    border: 3px solid $cyan;
     color: $cyan;
   }
   &.is-active {
     color: $cyan;
-    border-bottom: 2px solid $cyan;
+    border-bottom: 3px solid $cyan;
   }
 }
