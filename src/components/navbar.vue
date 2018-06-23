@@ -1,18 +1,19 @@
 <template>
-  <div class="navbar">
+  <!-- <div class="navbar">
     <div class="logo-div float-l h-75 w-300 m-l-50 m-r-50">
       <div class="logo"></div>
     </div>
     <div class="float-r m-r-50 min-w-400">
       <div v-for="page in navButtons" class="float-l">
-        <!-- <router-link :to="{path:page.route}"> -->
+        <router-link :to="{path:page.route}">
         <button v-scroll-to="page.id" class="btn nav-btn">
           {{page.name}}
         </button>
-        <!-- </router-link> -->
+        </router-link>
       </div>
     </div>
-  </div>
+  </div> -->
+
 </template>
 
 <script>

@@ -1,18 +1,21 @@
 <template>
   <div id="app">
     <navbar></navbar>
-    <router-view/>
+    <!-- <router-view/> -->
+    <home></home>
   </div>
 </template>
 
 <script>
 import Navbar from './components/navbar'
+import Home from './components/home'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 export default {
   name: 'App',
   components: {
-    'navbar': Navbar
+    'navbar': Navbar,
+    'home': Home
   },
   data () {
     return { title: 'Home24' }
