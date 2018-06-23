@@ -1,0 +1,152 @@
+.logo {
+  width: 100%;
+  height: 100%;
+  background: url(./assets/Home24.png);
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.icon-bts {
+  width: 100%;
+  height: 100%;
+  background: url(./assets/icon-bts.png);
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.icon-breakfast {
+  width: 100%;
+  height: 100%;
+  background: url(./assets/icon-breakfast.png);
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.icon-car {
+  width: 100%;
+  height: 100%;
+  background: url(./assets/icon-car.png);
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.icon-parking {
+  width: 100%;
+  height: 100%;
+  background: url(./assets/icon-parking.png);
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.icon-wifi {
+  width: 100%;
+  height: 100%;
+  background: url(./assets/icon-wifi.png);
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.icon-em {
+  width: 100%;
+  height: 100%;
+  background: url(./assets/icon-em.png);
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.description {
+  opacity: 0;
+  color: $cyan;
+  text-align: center;
+  margin-top: 20px;
+  transition: all 400ms ease-in-out;
+  text-transform: uppercase;
+}
+.grow {
+  transition: all 400ms;
+}
+.service {
+  &:hover {
+    .description {
+      opacity: 1;
+    }
+    .grow {
+      transform: scale(1.3);
+    }
+    .icon-bts {
+      width: 100%;
+      height: 100%;
+      background: url(./assets/icon-bts-hv.png);
+      background-repeat: no-repeat;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+    .icon-breakfast {
+      width: 100%;
+      height: 100%;
+      background: url(./assets/icon-breakfast-hv.png);
+      background-repeat: no-repeat;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+    .icon-car {
+      width: 100%;
+      height: 100%;
+      background: url(./assets/icon-car-hv.png);
+      background-repeat: no-repeat;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+    .icon-parking {
+      width: 100%;
+      height: 100%;
+      background: url(./assets/icon-parking-hv.png);
+      background-repeat: no-repeat;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+    .icon-wifi {
+      width: 100%;
+      height: 100%;
+      background: url(./assets/icon-wifi-hv.png);
+      background-repeat: no-repeat;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+    .icon-em {
+      width: 100%;
+      height: 100%;
+      background: url(./assets/icon-em-hv.png);
+      background-repeat: no-repeat;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+  }
+}
