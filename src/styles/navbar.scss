@@ -40,8 +40,9 @@
   padding-top: 10px;
   text-decoration: none;
   &:hover {
-    border: 2px solid $bone;
+    border-bottom: 2px solid $bone;
     text-decoration: none;
+    color: $bone;
   }
   &.active-nav {
     border: 2px solid $cyan;

@@ -9,12 +9,10 @@
 </template>
 
 <script>
-import TitleLogo from './title-logo';
 import $ from 'jquery';
 export default {
   name: 'nav',
   components: {
-    'title-logo': TitleLogo
   },
   data () {
     return {
