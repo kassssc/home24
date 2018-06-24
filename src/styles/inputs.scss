@@ -1,3 +1,96 @@
+.dropdown.v-select  {
+  border-radius: 0px;
+  height: 40px;
+  text-transform: uppercase;
+  background: transparent;
+  font-weight: 900;
+  font-size: 16px;
+  transition: 200ms ease-in-out;
+  width: 225px;
+  border: 2px solid $bone;
+  position: relative;
+  &.open {
+    border-bottom: 2px solid transparent;
+    .open-indicator {
+      top: 14px;
+    }
+  }
+  .dropdown-toggle {
+    border-style: none;
+    height: 100%;
+    .clear {
+      margin-right: 10px;
+      color: $bone;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      font-size: 16px;
+    }
+    &.clearfix {
+      border-style: none;
+      height: 100%;
+    }
+    &::after {
+      border-style: none;
+      height: 100%;
+    }
+  }
+  .open-indicator {
+    position: absolute;
+    top: 10px;
+    &::before {
+      border-color: $bone;
+    }
+  }
+  .selected-tag {
+    color: $bone;
+  }
+  ul.dropdown-menu {
+    background: $charcoal-translucent;
+    border-radius: 0px;
+    border-style: none;
+    color: $bone;
+    margin: 0;
+    padding: 0;
+    & > .highlight > a {
+      background: transparent;
+      &:hover {
+        color: $charcoal;
+      }
+    }
+    .active > a {
+      color: $cyan;
+    }
+    li {
+      a {
+        transition: all 200ms ease-in-out;
+        &:hover {
+          background: $cyan;
+        }
+      }
+    }
+  }
+
+  &.dropdown-menu > .highlight > a {
+    background: transparent;
+  }
+  input[type="search"], .v-select input[type="search"]:focus {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    font-weight: 900;
+    font-size: 16px;
+    color: $bone;
+  }
+}
+
+.input-label {
+  color: $bone;
+  width: 225px;
+  text-transform: uppercase;
+}
+
 $calendar-color: $bone;
 .vdp-datepicker {
   height: 40px;
@@ -64,9 +157,6 @@ $calendar-color: $bone;
       background: rgba(125, 185, 185, 0.9);
     }
   }
-  .next {
-    //background: rgba(0,0,0, 1);
-  }
   .cell {
     transition: 200ms ease-in-out;
     border-style: none;
@@ -94,4 +184,21 @@ $calendar-color: $bone;
       background: transparent;
     }
   }
+}
+
+::placeholder  { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    text-transform: uppercase;
+    opacity: 1; /* Firefox */
+}
+
+.form-control::placeholder {
+  //color: $charcoal-translucent;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    text-transform: uppercase;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    text-transform: uppercase;
 }

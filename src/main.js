@@ -4,15 +4,17 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import BootstrapVue from 'bootstrap-vue'
+
 import VueScrollactive from 'vue-scrollactive'
 import vSelect from '../node_modules/vue-select/src/components/Select.vue'
+import Datepicker from 'vuejs-datepicker/dist/vuejs-datepicker.esm.js'
 import vueScrollto from 'vue-scrollto'
 import * as VueGoogleMaps from 'vue2-google-maps'
 
-Vue.use(VueScrollactive);
 Vue.config.productionTip = false
+
 Vue.use(BootstrapVue)
-Vue.component('v-select', vSelect)
+Vue.use(VueScrollactive);
 Vue.use(vueScrollto)
 Vue.use(VueGoogleMaps, {
   load: {
@@ -38,6 +40,9 @@ Vue.use(VueGoogleMaps, {
   //// then disable the following:
   // installComponents: true,
 })
+
+Vue.component('v-select', vSelect)
+Vue.component('datepicker', Datepicker)
 
 /* eslint-disable no-new */
 new Vue({

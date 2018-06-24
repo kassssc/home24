@@ -1,9 +1,6 @@
 <template>
-
   <b-container class="content p-0">
 
-
- <!-- HOME -->
     <b-row id="home">
       <b-col class="shade">
         <b-row>
@@ -37,7 +34,7 @@
             <datepicker class="m-x-15" placeholder="check-out date" v-model="checkout_date">
 
             </datepicker>
-            <v-select class="m-x-15" v-model="selected" :options="options"></v-select>
+            <v-select class="m-x-15" placeholder="guests" v-model="guests" :options="options"></v-select>
             <button class="btn outline size-lg m-x-15" v-scroll-to="'#book'">book</button>
           </b-col>
         </b-row>
@@ -86,8 +83,8 @@
           </b-col>
         </b-row>
 
-      </b-col> <!-- END home-col -->
-    </b-row> <!-- END HOME -->
+      </b-col>
+    </b-row>
 
     <gallery></gallery>
     <book></book>
@@ -104,12 +101,11 @@
 </template>
 
 <script>
+import $ from 'jquery'
 import Gallery from './gallery'
 import Book from './book'
 import Rates from './rates'
 import Contact from './contact'
-import Datepicker from 'vuejs-datepicker/dist/vuejs-datepicker.esm.js';
-import $ from 'jquery'
 
 export default {
   name: 'Home',
@@ -117,28 +113,30 @@ export default {
     'gallery': Gallery,
     'book': Book,
     'rates': Rates,
-    'contact': Contact,
-    'datepicker': Datepicker
+    'contact': Contact
   },
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App',
       options: [
         {id: 1, label: '1'},
         {id: 2, label: '2'},
         {id: 3, label: '3'},
         {id: 4, label: '4'},
-        {id: 5, label: '5'}
+        {id: 5, label: '5'},
+        {id: 6, label: '6'},
+        {id: 7, label: '7'},
+        {id: 8, label: '8'},
+        {id: 9, label: '9'},
+        {id: 10, label: '10'}
       ],
-      selected: null,
+      guests: null,
       checkin_date: null,
       checkout_date: null
     }
   }
 }
 </script>
-import $ from 'jquery'
-$('.datepicker').datepicker()
+
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 </style>

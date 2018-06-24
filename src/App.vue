@@ -15,16 +15,15 @@ export default {
     'navbar': Navbar
   },
   data () {
-    return { title: 'Home24' }
+    return { }
   }
 }
 </script>
 
 <style lang="scss">
-//@import '../node_modules/bootstrap/scss/bootstrap.scss';
 @import './styles/helpers.scss';
 @import './styles/styles.scss';
 @import './styles/images.scss';
 @import './styles/navbar.scss';
-@import './styles/calendar.scss';
+@import './styles/inputs.scss';
 </style>

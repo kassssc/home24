@@ -1,4 +1,4 @@
-//@import url('./styles/navbar.scss');
+
 // Global sass
 html {
   width: 100vw;
@@ -199,57 +199,5 @@ h6 {
 
 .google-maps {
   border: 3px solid $bone;
-}
-
-.dropdown.v-select  {
-  border-radius: 0px;
-  height: 40px;
-  text-transform: uppercase;
-  background: transparent;
-  font-weight: 900;
-  font-size: 16px;
-  transition: 300ms ease-in-out;
-  width: 225px;
-  border: 2px solid $bone;
-  position: relative;
-  &.open {
-    border-bottom: none;
-  }
-  .selected-tag {
-    color: $bone;
-  }
-  .dropdown-toggle, .dropdown-toggle.clearfix {
-    border-style: none;
-    height: 100%;
-  }
-  .dropdown-toggle::after {
-    border-style: none;
-    height: 100%;
-  }
-  /* ul.dropdown-menu {
-    background: $charcoal-translucent;
-    border-radius: 0px;
-    border-style: none;
-    color: $chalk;
-    a {
-      &:hover, &.highlight {
-        background: transparent;
-      }
-    }
-  }
-
-  &.dropdown-menu > .highlight > a {
-    background: transparent;
-  } */
-  input[type="search"], .v-select input[type="search"]:focus {
-    position: absolute;
-    top: 0;
-  }
-}
-
-.input-label {
-  color: $bone;
-  width: 225px;
-  text-transform: uppercase;
 }
 
