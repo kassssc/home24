@@ -18,25 +18,25 @@ $thin-font-weight: #{$normal-font-weight - 300} !default;
 $i: 0;
 @while $i <= $maximum-dimension-helper-class {
   .min-w-#{$i} {
-    min-width: #{$i}px !important;
+    min-width: #{$i}px;
   }
   .w-#{$i} {
-    width: #{$i}px !important;
+    width: #{$i}px;
   }
   .max-w-#{$i} {
-    max-width: #{$i}px !important;
+    max-width: #{$i}px;
   }
   .min-h-#{$i} {
-    min-height: #{$i}px !important;
+    min-height: #{$i}px;
   }
   .h-#{$i} {
-    height: #{$i}px !important;
+    height: #{$i}px;
   }
   .max-h-#{$i} {
-    max-height: #{$i}px !important;
+    max-height: #{$i}px;
   }
   .lh-#{$i} {
-    line-height: #{$i}px !important;
+    line-height: #{$i}px;
   }
   $i: $i + 1;
 }

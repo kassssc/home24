@@ -70,20 +70,29 @@
   background-size: cover;
 }
 .description {
-  opacity: 0;
-  color: $cyan;
+  margin: 0px 20px 0px 20px;
+  //opacity: 0;
+  color: $primary;
   text-align: center;
   margin-top: 20px;
   transition: all 400ms ease-in-out;
   text-transform: uppercase;
 }
 .grow {
-  transition: all 400ms;
+  transition: all 250ms;
 }
 .service {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 200px;
+  .description {
+    transform: scaleY(0);
+  }
   &:hover {
     .description {
-      opacity: 1;
+      //opacity: 1;
+      transform: scaleY(1);
     }
     .grow {
       transform: scale(1.3);

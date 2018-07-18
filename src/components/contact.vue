@@ -16,8 +16,18 @@
           </div>
         </b-col>
         <b-col>
-          <h5 class="color-bone">02-258-1818</h5>
-          <h5 class="color-bone">reservation@bkkhome24.com</h5>
+          <div class="contact-field">
+            <i class="fas fa-phone"></i>
+            02-258-1818
+          </div>
+          <div class="contact-field">
+            <i class="fas fa-envelope"></i>reception@bkkhome24.com
+          </div>
+          <div class="contact-field">
+            <i class="fas fa-fax"></i>
+            02-258-6488
+          </div>
+          <i class="fas fa-map-marked"></i>
         </b-col>
       </b-row>
     </b-col>

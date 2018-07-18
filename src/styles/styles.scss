@@ -24,8 +24,9 @@ body {
 $chalk: #EDEBEB;
 $bone: #E3DCCE;
 $charcoal: #464242;
-$cyan: #7DB9B9;
-$charcoal-translucent: rgba(57, 55, 54, 0.8);
+$primary: #7DB9B9;
+//$primary: #CC878C;
+$charcoal-translucent: rgba(57, 55, 54, 0.75);
 
 .color-bone {
   color: $bone;
@@ -46,121 +47,119 @@ $charcoal-translucent: rgba(57, 55, 54, 0.8);
 }
 
 h1 {
-  font-size: 54px;
+  font-size: 52px;
   font-weight: 900;
 }
 h2 {
-  font-size: 42px;
+  font-size: 40px;
   font-weight: 900;
 }
 h3 {
-  font-size: 36px;
+  font-size: 34px;
   font-weight: 800;
 }
 h4 {
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 700;
 }
 h5 {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 700;
 }
 h6 {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 900;
 }
 
+.container {
+  max-width: none;
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
+    display: none;
+  }
+  ::-moz-scrollbar-track {
+    background-color: transparent !important;
+    display: none;
+  }
+}
 .content {
-  min-width: 1100px;
-  width: 100vw;
-  position: absolute;
-  top: 0;
+  //min-width: 1100px;
+  //width: 100vw;
 }
 
 #home {
-  width: 100vw;
-  min-width: 1100px;
+  //min-width: 1100px;
   height: 100vh;
-
+  width: 100%;
   background: url(./assets/bg-temp.jpg);
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  margin: 0;
 }
 
 #gallery {
-  padding-top: 125px;
-  width: 100vw;
-  min-width: 1100px;
+  padding-top: 90px;
+  //min-width: 1100px;
   height: 100vh;
   min-width: 700px;
   background: $chalk;
-
+  width: 100%;
+  margin: 0;
 }
 
 #rates {
-  padding-top: 125px;
-  width: 100vw;
-  min-width: 1100px;
+  //padding-top: 90px;
+  //min-width: 1100px;
   height: 100vh;
   min-width: 700px;
   background: $chalk;
-
+  width: 100%;
+  margin: 0;
 }
 
 #book {
-  width: 100vw;
-  min-width: 1100px;
-  height: 100vh;
-
+  min-height: 100vh;
   background: url(./assets/bg-temp.jpg);
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  width: 100%;
+  margin: 0;
 }
 
 #contact {
-  width: 100vw;
-  min-width: 1100px;
   height: 100vh;
-
+  width: 100%;
   background: url(./assets/bg-temp.jpg);
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  margin: 0;
 }
 
 .shade {
   background: $charcoal-translucent;
-  padding-top: 125px;
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
   padding-right: 0px;
-}
-
-.headline {
-  margin-top: 5vh;
-  margin-bottom: 85px;
-  h1 {
-    margin-top: 25px;
-  }
+  padding: 125px 10vw 0 10vw;
 }
 
 .btn {
-  border-radius: 0px;
-  height: 40px;
+  border-radius: 1px;
   text-transform: uppercase;
   background: transparent;
   color: $bone;
   font-weight: 900;
-  font-size: 16px;
-  transition: 300ms ease-in-out;
+  transition: 150ms ease-in-out;
+  box-shadow: none !important;
   &.outline {
     border: 2px solid $bone;
     &:hover {
@@ -168,25 +167,60 @@ h6 {
       color: $charcoal;
     }
   }
+  &.filled {
+    background: $primary;
+    border: 2px solid $primary;
+    color: $charcoal;
+    transition: 150ms ease-in-out;
+    &:hover {
+      background: transparent;
+      color: $primary;
+    }
+  }
   &.block {
     width: 100%;
   }
   &.size-sm {
     width: 110px;
+    height: 30px;
+    font-size: 12px;
   }
   &.size-md {
     width: 150px;
+    height: 35px;
+    font-size: 14px;
   }
   &.size-lg {
     width: 225px;
+    height: 40px;
+    font-size: 16px;
   }
 }
 
+.headline {
+  margin-left: 40px;
+  margin-top: 15vh;
+  margin-bottom: 15vh;
+  h1 {
+    margin-top: 10px;
+  }
+  h4 {
+    padding-top: 10px;
+    //border-top: 5px solid $primary;
+  }
+}
+
+.headline-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
 .btn-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
+  margin: 0 40px 0 40px;
 }
 
 .services-container {
@@ -201,3 +235,135 @@ h6 {
   border: 3px solid $bone;
 }
 
+.room-type {
+  height: 100vh;
+}
+
+.style-card {
+  text-transform: uppercase;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  border-radius: 5px;
+  background: transparent;
+  height: 70px;
+  width: 85%;
+  padding: 15px;
+  margin: 10px 0;
+  transition: 150ms ease-in-out;
+  -webkit-user-select: none; /* Chrome all / Safari all */
+  -moz-user-select: none; /* Firefox all */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none; /* Likely future */
+  color: $charcoal;
+  .type-title {
+    font-size: 16px;
+    font-weight: 900;
+  }
+  .types {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    .type-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 14px;
+      font-weight: 900;
+      height: 100%;
+      width: 100%;
+    }
+  }
+  &.active, &:hover {
+    background: $charcoal-translucent;
+    color: $bone;
+    .rate:after { color: darken($bone, 15%) };
+  }
+  &.active {
+    transform: scale(1.15);
+    margin: 20px 0;
+  }
+  .rate::after {
+    content: '/night';
+    display: inline-block;
+    font-size: 10px;
+    color: lighten($charcoal, 15%);
+    margin-left: 2px;
+    text-transform: lowercase;
+  }
+}
+.carousel-container {
+  border-radius: 5px;
+  background: lighten($charcoal, 15%);
+}
+.rate-btn-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 25px 0;
+  button {
+    background: transparent;
+    border: 2px solid $charcoal;
+    border-radius: 5px;
+    width: 90px;
+    height: 35px;
+    text-transform: uppercase;
+    color: $charcoal;
+    font-size: 14px;
+    font-weight: 900;
+    transition: 200ms ease-in-out;
+    margin: 0 10px;
+    &.active {
+      color: $bone;
+      background: $charcoal;
+    }
+  }
+}
+
+.contact-field {
+  margin: 20px 0;
+  i {
+    font-size: 30px;
+    margin-right: 15px;
+  }
+  font-size: 28px;
+  font-weight: 800;
+  color: $bone;
+  border-radius: 5px;
+  &:hover {
+    background: $charcoal-translucent;
+    &::after {
+      content: 'CLICK TO COPY';
+      display: block;
+      font-size: 16px;
+      font-weight: 800;
+      color: $primary;
+    }
+  }
+}
+
+.placeholder-img {
+  background-image: url(http://via.placeholder.com/350x150);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.flex-y {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &.flex-align-start {
+    justify-content: flex-start;
+  }
+}
