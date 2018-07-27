@@ -23,7 +23,7 @@
         </b-col>
       </b-row>
 
-      <b-row class="w-85percent m-t-15">
+      <b-row class="w-85percent m-t-10">
         <b-col sm="4" md="2">
           <b-form-group id="fieldset1"
                         label="Nights *">
@@ -54,44 +54,55 @@
         </b-col>
       </b-row>
 
-      <b-row class="m-y-15">
+      <b-row class="m-y-10">
         <b-col>
-          <button class="btn outline size-lg">check availability</button>
+          <button class="btn filled size-lg">check availability</button>
         </b-col>
       </b-row>
 
-      <b-row class="w-85percent m-t-30">
-        <b-col sm="12" md="6">
-          <b-form-group id="fieldset1"
-                        label="First Name">
-            <b-form-input id="input1" v-model.trim="first_name"></b-form-input>
-          </b-form-group>
+      <b-row class="w-85percent m-t-20">
+        <b-col sm="12" md="8">
+          <b-row>
+            <b-col sm="12" md="6">
+              <b-form-group id="fieldset1"
+                            label="First Name">
+                <b-form-input id="input1" v-model.trim="first_name"></b-form-input>
+              </b-form-group>
+            </b-col>
+            <b-col sm="12" md="6">
+              <b-form-group id="fieldset2"
+                            label="Last Name">
+                <b-form-input id="input2" v-model.trim="last_name"></b-form-input>
+              </b-form-group>
+            </b-col>
+          </b-row>
+
+          <b-row>
+            <b-col sm="12" md="6">
+              <b-form-group id="fieldset1"
+                            label="E-mail">
+                <b-form-input id="input1" v-model.trim="email"></b-form-input>
+              </b-form-group>
+            </b-col>
+            <b-col sm="12" md="6">
+              <b-form-group id="fieldset2"
+                            label="Phone #">
+                <b-form-input id="input2" v-model.trim="phone"></b-form-input>
+              </b-form-group>
+            </b-col>
+          </b-row>
         </b-col>
-        <b-col sm="12" md="6">
-          <b-form-group id="fieldset2"
-                        label="Last Name">
-            <b-form-input id="input2" v-model.trim="last_name"></b-form-input>
+
+        <b-col sm="12" md="4">
+          <b-form-group id="notes"
+                        label="Notes">
+            <textarea name="notes" cols="4" class="h-95"></textarea>
           </b-form-group>
         </b-col>
       </b-row>
 
       <b-row class="w-85percent">
-        <b-col sm="12" md="6">
-          <b-form-group id="fieldset1"
-                        label="E-mail">
-            <b-form-input id="input1" v-model.trim="email"></b-form-input>
-          </b-form-group>
-        </b-col>
-        <b-col sm="12" md="6">
-          <b-form-group id="fieldset2"
-                        label="Phone #">
-            <b-form-input id="input2" v-model.trim="phone"></b-form-input>
-          </b-form-group>
-        </b-col>
-      </b-row>
-
-      <b-row class="w-85percent">
-        <b-col sm="6" md="3">
+        <b-col sm="6" md="4">
           <b-form-group label="Airport Service">
             <b-form-checkbox id="checkbox-airport-car"
                              v-model="airport_service"
@@ -101,7 +112,7 @@
             </b-form-checkbox>
           </b-form-group>
         </b-col>
-        <b-col sm="6" md="3">
+        <b-col sm="6" md="4">
           <b-form-group id="fieldset2"
                         label="Pick-up Time">
             <b-form-input id="input2" v-model.trim="pickup_time"></b-form-input>

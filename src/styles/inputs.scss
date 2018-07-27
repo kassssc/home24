@@ -111,6 +111,24 @@
       }
     }
   }
+  textarea {
+    resize: none;
+    width: 100%;
+    border-width: 0 0 3px 0;
+    border-color: $bone;
+    color: $bone;
+    font-size: 18px;
+    font-weight: 800;
+    background: transparent;
+    box-shadow: none !important;
+    height: 100px;
+    &:focus {
+      color: $primary;
+      border-color: $primary;
+      box-shadow: none !important;
+      outline: none !important;
+    }
+  }
 }
 .custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
   background-color: transparent;
@@ -251,6 +269,13 @@ $calendar-color: $bone;
     transition: 300ms ease-in-out;
     height: 40px;
     width: 225px;
+  }
+}
+
+.vdp-datepicker.top {
+  .vdp-datepicker__calendar {
+    position: absolute;
+    top: -275px;
   }
 }
 

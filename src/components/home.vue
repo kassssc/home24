@@ -4,10 +4,11 @@
     <b-row id="home">
       <b-col class="shade">
         <b-row>
-          <b-col class="headline-container full-width min-w-600 unselectable">
+          <b-col class="headline-container full-width unselectable">
             <div class="headline text-left">
-              <h4 class="color-bone">Home24 Boutique Hotel</h4>
-              <h1 class="color-bone">Live <em>in</em> BANGKOK CITY</h1>
+              <h3 class="color-bone">Live <em>in</em></h3>
+              <h1 class="color-bone">BANGKOK<br>CITY</h1>
+              <h6 class="color-bone">Enjoy the City of Angels the right way</h6>
               <button v-scroll-to="'#gallery'" class="btn filled size-md m-y-10">
                 gallery
               </button>
@@ -16,14 +17,52 @@
           </b-col>
         </b-row>
 
-        <b-row class="m-t-50 m-b-0">
-          <b-col class="btn-container">
-            <!-- <div v-if="checkin_date" class="input-label"><h6>check-in</h6></div>
-            <div v-if="checkout_date" class="input-label"><h6>check-out</h6></div> -->
+        <b-row class="full-width m-0">
+          <b-col sm="6" md="3">
+            <b-form-group id="fieldset1"
+                          label="Check-in *">
+              <datepicker v-model="checkin_date" class="top"></datepicker>
+              <i class="far fa-calendar-alt calendar-icon"></i>
+            </b-form-group>
+          </b-col>
+          <b-col sm="6" md="3">
+            <b-form-group id="fieldset1"
+                          label="Check-out *">
+              <datepicker v-model="checkout_date" class="top"></datepicker>
+              <i class="far fa-calendar-alt calendar-icon"></i>
+            </b-form-group>
+          </b-col>
+          <b-col sm="6" md="3">
+            <b-form-group id="fieldset1"
+                          label="Guests *">
+              <v-select v-model="guest_count" :options="options" class="top"></v-select>
+            </b-form-group>
+          </b-col>
+          <b-col sm="6" md="3">
+            <button v-scroll-to="'#book'" class="btn filled full-width m-y-10">
+              check availibility
+            </button>
           </b-col>
         </b-row>
 
-        <b-row class="h-50">
+        <!-- <b-row class="h-50">
+          <b-row class="w-85percent">
+            <b-col sm="12" md="6">
+              <b-form-group id="fieldset1"
+                            label="Check-in *">
+                <datepicker v-model="checkin_date"></datepicker>
+                <i class="far fa-calendar-alt calendar-icon"></i>
+              </b-form-group>
+            </b-col>
+            <b-col sm="12" md="6">
+              <b-form-group id="fieldset1"
+                            label="Check-out *">
+                <datepicker v-model="checkout_date"></datepicker>
+                <i class="far fa-calendar-alt calendar-icon"></i>
+              </b-form-group>
+            </b-col>
+          </b-row>
+
           <b-col class="btn-container">
             <datepicker class="style-btn" placeholder="check-in date" v-model="checkin_date">
             </datepicker>
@@ -33,7 +72,8 @@
             <v-select class="" placeholder="guests" v-model="guests" :options="options"></v-select>
             <button class="btn outline size-lg" v-scroll-to="'#book'">book</button>
           </b-col>
-        </b-row>
+        </b-row> -->
+
         <!-- Services -->
         <!-- <b-row class="h-50 m-t-50 p-x-30">
           <b-col class="services-container unselectable">

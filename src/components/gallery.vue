@@ -2,7 +2,7 @@
   <b-row id="gallery">
     <b-col>
       <b-row>
-        <div class="full-width min-w-600 text-center">
+        <div class="full-width text-center">
           <h2 class="color-charcoal">GALLERY</h2>
         </div>
       </b-row>
